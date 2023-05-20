@@ -13,6 +13,7 @@
   width: 100vw -25px;
   overflow-x: hidden;
   padding-bottom: 15px;
+  margin-bottom: 40px;
 }
 
 .list::-webkit-scrollbar {
