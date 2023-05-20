@@ -9,7 +9,7 @@
   color: #fff;
   font-weight: 100;
   font-size: 16px;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
   overflow-y: hidden;
   cursor: pointer;
 }
@@ -27,6 +27,11 @@
   font-size: 16px;
   padding: 10px;
   overflow-y: hidden;
+}
+
+.minimized {
+  background-color: rgba(73, 73, 73, 0);
+  padding: 0;
 }
 
 .actions {
@@ -72,4 +77,16 @@ ul li:hover {
 
 .container:hover {
   overflow-y: overlay;
+}
+
+.clear_button {
+  margin-left: 5px;
+  border-radius: 30px;
+  background-color: rgba(29, 29, 29, 0.763);
+  height: 26px;
+  color: #fff;
+  font-size: 12px;
+  width: 50px;
+  border-color: transparent;
+  padding: 4px 5px 2px 5px;
 }

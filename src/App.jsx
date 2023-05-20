@@ -82,7 +82,7 @@ export const App = () => {
         {/* HEADER */}
         <div className={s.header}>
           <div className="row">
-            <div className="col-4">
+            <div className="col-md-12 col-lg-4">
               {/* LOGO */}
               <div>
                 <Logo
