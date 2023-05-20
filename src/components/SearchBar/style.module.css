@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  z-index: 99;
+}
+
+.icon {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+
+.input {
+  border-radius: 30px;
+  background-color: rgba(73, 73, 73, 0.66);
+  height: 30px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 16px;
+  width: 100%;
+  border-color: transparent;
+  padding: 15px 50px 15px 40px;
+}
+
+.button {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  border-radius: 30px;
+  background-color: rgba(29, 29, 29, 0.763);
+  height: 26px;
+  color: #fff;
+  font-size: 12px;
+  width: 60px;
+  border-color: transparent;
+  padding: 4px 5px 2px 5px;
+}
+
+input::placeholder {
+  color: rgb(224, 221, 221);
+  font-size: 16px;
+}
+
+input:focus {
+  outline-width: 0;
+  border: solid 1px white;
+}

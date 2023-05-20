@@ -1,0 +1,33 @@
+.title {
+  font-weight: 400;
+  font-size: 35px;
+}
+.rating_container {
+  display: flex;
+}
+.rating {
+  padding-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.overview {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  height: 120px;
+  overflow-y: hidden;
+  margin-top: 10px;
+}
+
+.overview:hover {
+  overflow-y: auto;
+}
+
+.tv_show_providers {
+  margin-top: 30px;
+}
+
+.tv_show_providers ul li {
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+}
