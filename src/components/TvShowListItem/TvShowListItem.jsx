@@ -1,5 +1,4 @@
 import s from './style.module.css';
-import { BACKDROP_SMALL_BASE_URL } from '../../config';
 
 export const TvShowListItem = ({ tvShow, onClick }) => {
   const onClick_ = () => {
@@ -9,7 +8,7 @@ export const TvShowListItem = ({ tvShow, onClick }) => {
     <div onClick={onClick_} className={s.container}>
       <img
         alt={TvShowListItem.name}
-        src={`${BACKDROP_SMALL_BASE_URL}${tvShow.backdrop_path}`}
+        src={`${process.env.REACT_APP_BACKDROP_SMALL_BASE_URL}${tvShow.backdrop_path}`}
       />
       <div className={s.title}>
         {tvShow.name.length > 20

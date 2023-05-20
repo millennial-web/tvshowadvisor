@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { BACKDROP_BASE_URL } from './config';
 import { TVShowAPI } from './api/tv-show';
 import { TvShowDetails } from './components/TvShowDetail/TvShowDetail';
 import { Logo } from './components/Logo/Logo';
@@ -53,7 +52,7 @@ export const App = () => {
 
   const getBackdropStyles = () => {
     return currentTVShow
-      ? `url("${BACKDROP_BASE_URL}${currentTVShow.backdrop_path}") no-repeat center / cover`
+      ? `url("${process.env.REACT_APP_BACKDROP_BASE_URL}${currentTVShow.backdrop_path}") no-repeat center / cover`
       : 'black';
   };
 
@@ -88,7 +87,7 @@ export const App = () => {
               <div>
                 <Logo
                   img={logoImg}
-                  title="WhatToWatch"
+                  title={process.env.REACT_APP_TITLE}
                   subtitle="Find a show you may like"
                 />
               </div>

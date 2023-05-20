@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { FAKE_POPULARS, FAKE_RECOMMENDATIONS } from './mock_data';
-import { BASE_URL, TMDB_API_KEY } from '../config';
 
 export class TVShowAPI {
   static async fetchPopular(mock = false) {
@@ -8,7 +7,7 @@ export class TVShowAPI {
       return FAKE_POPULARS;
     }
     const response = await axios.get(
-      `${BASE_URL}/trending/tv/day${TMDB_API_KEY}`
+      `${process.env.REACT_APP_TMDB_BASE_URL}/trending/tv/day${process.env.REACT_APP_TMDB_API_KEY}`
     );
     return response.data.results;
   }
@@ -18,7 +17,7 @@ export class TVShowAPI {
       return FAKE_RECOMMENDATIONS;
     }
     const response = await axios.get(
-      `${BASE_URL}/tv/${TvShowId}/recommendations${TMDB_API_KEY}`
+      `${process.env.REACT_APP_TMDB_BASE_URL}/tv/${TvShowId}/recommendations${process.env.REACT_APP_TMDB_API_KEY}`
     );
     if (response.data.results.length) {
       return response.data.results;
@@ -28,14 +27,14 @@ export class TVShowAPI {
 
   static async fetchWatchProviders(TvShowId) {
     const response = await axios.get(
-      `${BASE_URL}/tv/${TvShowId}/watch/providers${TMDB_API_KEY}`
+      `${process.env.REACT_APP_TMDB_BASE_URL}/tv/${TvShowId}/watch/providers${process.env.REACT_APP_TMDB_API_KEY}`
     );
     return response;
   }
 
   static async search(query) {
     const response = await axios.get(
-      `${BASE_URL}/search/tv${TMDB_API_KEY}&query=${query}`
+      `${process.env.REACT_APP_TMDB_BASE_URL}/search/tv${process.env.REACT_APP_TMDB_API_KEY}&query=${query}`
     );
     if (response.data.results.length) {
       return response.data.results;
