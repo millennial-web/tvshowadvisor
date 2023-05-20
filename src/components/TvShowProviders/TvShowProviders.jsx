@@ -30,7 +30,7 @@ export const TvShowProviders = ({ providers, defaultCountry }) => {
     <>
       <h4>Where to watch:</h4>
       <div className={s.container}>
-        <div className={s.details}>
+        <div className={s.country_col}>
           <p className={s.selectLabel}>Select a Country</p>
           <select
             onChange={(e) => {

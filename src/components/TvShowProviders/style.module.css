@@ -19,6 +19,7 @@ select {
   border-radius: 10px;
   color: white;
   padding: 8px;
+  width: 100%;
 }
 
 select:focus {
