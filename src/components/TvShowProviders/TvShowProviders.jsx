@@ -30,21 +30,23 @@ export const TvShowProviders = ({ providers, defaultCountry }) => {
     <>
       <h4>Where to watch:</h4>
       <div className={s.container}>
-        <select
-          onChange={(e) => {
-            setSelected(e.target.value);
-          }}
-          value={selected}
-        >
-          <option value="">Select Country</option>
-          {providers.map((prov) => {
-            return (
-              <option key={prov.country} value={prov.country}>
-                {prov.country}
-              </option>
-            );
-          })}
-        </select>
+        <div className={s.details}>
+          <p className={s.selectLabel}>Select a Country</p>
+          <select
+            onChange={(e) => {
+              setSelected(e.target.value);
+            }}
+            value={selected}
+          >
+            {providers.map((prov) => {
+              return (
+                <option key={prov.country} value={prov.country}>
+                  {prov.country}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <div className={s.details}>
           {details && (
             <a href={details.link} target="_blank" rel="noreferrer">

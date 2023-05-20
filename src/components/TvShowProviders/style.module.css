@@ -4,6 +4,12 @@
 
 h4 {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.selectLabel {
+  padding: 0;
+  margin: 0;
 }
 
 select {
